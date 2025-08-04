@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,6 +60,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173"
     ]
+
+EBAY_APP_ID = os.getenv('EBAY_APP_ID')
+EBAY_DEV_ID = os.getenv('EBAY_DEV_ID')
+EBAY_CERT_ID = os.getenv('EBAY_CERT_ID')
+EBAY_REDIRECT_URI = os.getenv('EBAY_REDIRECT_URI')
 
 TEMPLATES = [
     {
